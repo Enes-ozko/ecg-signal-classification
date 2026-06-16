@@ -4,8 +4,8 @@ Ce projet a été développé dans le cadre du module Deep Learning au sein de l
 
 L'application intègre également une architecture conteneurisée permettant le déploiement et l'interconnexion des modèles via une API d'inférence et une interface utilisateur web.
 
-## Élève
-* Ozkosar Enes
+## Auteur
+* Elève : Ozkosar Enes
 * Encadrant : M. Maxime Devanne
 
 ---
