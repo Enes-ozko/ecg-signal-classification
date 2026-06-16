@@ -1,0 +1,5 @@
+target/
+.mvn/
+.DS_Store
+*.class
+.ipynb_checkpoints/

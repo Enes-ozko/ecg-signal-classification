@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Cardio IA </title>
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white"><h2>Diagnostic ECG </h2></div>
+            <div class="card-body">
+                <form action="/analyze" method="post" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label class="form-label">Fichier ECG du patient (format .tsv ou .txt)</label>
+                        <input type="file" name="file" class="form-control" accept=".txt,.tsv" required>
+                        <div class="form-text">Le fichier doit contenir les 96 valeurs du signal.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Architecture IA :</label>
+                        <select name="type" class="form-select">
+                            <option value="cnn">CNN </option>
+                            <option value="mlp">MLP </option>
+                            <option value="rnn">RNN </option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-success w-100 btn-lg">Lancer l'analyse médicale</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

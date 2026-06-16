@@ -1,0 +1,11 @@
+#!/bin/bash
+docker compose down
+
+( cd ia_service; docker buildx build --rm -t ia . )
+( cd api_frontal; docker buildx build --rm -t api . )
+
+echo "Before export this variable using :"
+echo "export MODELS=`cd ..; pwd`"
+export MODELS=`cd ..; pwd`
+
+docker compose up
